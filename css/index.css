@@ -1,0 +1,35 @@
+*{ margin:0; padding:0; font-size:12px; font-family:'宋体', serif ;}
+li{ list-style:none;}
+a{ text-decoration:none;}
+html,body{ height:100%; width:100%; overflow:hidden; cursor:default;-webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;box-sizing:border-box;}
+body{background:#396CA3;padding-bottom:32px;}
+.contextmenu li{padding:5px 24px; position:relative;}
+.contextmenu li:hover{ background:#092469; color:white;}
+ul.contextmenu, ul.contextmenu ul{ z-index:80;display:none;position:absolute; background:#D3CEC8; cursor:default;color:#030000;width:auto; border:2px solid #E5E5E5; border-right-color:#6F6F6F; border-bottom-color:#989898; border-left-color:#EEEEEE; }
+.contextmenu li.ruleline{ content:''; margin:2px 0;height:1px; border-bottom:1px solid #E8E8E8; background:#A29F9A; padding:0;}
+.contextmenu li.ruleline:hover{ background:#A29F9A;}
+.contextmenu li.disable{ color:#828282;text-shadow:1px 1px 0 #E8E8E8;}
+.contextmenu li.disable:hover{ background:transparent;}
+.contextmenu li.menu::after{ content:' '; position:absolute; right:6px;top:7px; display:block;border:4px solid transparent;border-left-color:#030000;}
+.contextmenu li.menu:hover::after{ border-left-color:white;}
+.contextmenu li.menu:hover>ul{ display:block;}
+.contextmenu li ul{ display:none; position:absolute; left:100%;top:0; white-space:nowrap;}
+.contextmenu li.right::before{ content:'✔'; position:absolute; left:6px;top:4px; font-weight:bold;}
+.contextmenu li.checkbox.checked::before{ content:' '; position:absolute; top:9px;left:8px;display:block; height:6px; width:6px;border-radius:50%;background:#030000;}
+.contextmenu li.checkbox.checked:hover::before{ background:white;}
+
+#desktopIcons{height:100%;-webkit-writing-mode: vertical-lr;-ms-writing-mode: tb-lr;writing-mode: vertical-lr;}
+.icon{position: relative;display:inline-block;margin:0 10px;padding:6px 10px 34px;height:32px;width:32px;}
+.icon.checked>.icon-title>.icon-msg{background:#092469;padding:2px;outline:1px darkgrey dotted;}
+.icon.checked>.icon-img{opacity: .65;}
+.icon-img{height:32px;width:32px;background:no-repeat center center;}
+.icon-title{text-shadow:1px 1px 3px black;-webkit-writing-mode: horizontal-tb;-ms-writing-mode: rl-tb;writing-mode: horizontal-tb;color:white;text-align: center;position:absolute;top:44px;word-wrap:break-word;left:-10px;right:-10px;}
+#doc{background-image:url('../image/doc.png');}
+#com{background-image:url('../image/com.png');}
+#bin{background-image:url('../image/bin.png');}
+#net{background-image:url('../image/net.png');}
+#int{background-image:url('../image/int.png');}
+
+.taskbar{padding:1px;height:28px;background:#D4D0C8;z-index:50;width:100%;position: absolute;bottom:0;border-top:1px solid #F9F9F8;box-shadow:0 -2px #D6D2CB;}
+.taskbar-btn{width:48px;line-height:24px;height:24px;border:2px solid #F6F6F4;border-left-color:#FCFCFB;border-right-color:#646464;border-bottom-color:#4C4C4C;}
+.taskbar-btn-logo{background:url('../image/xp.png') no-repeat center center;height:16px;width:16px;display:inline-block;position:relative;left:4px;top:4px;}
