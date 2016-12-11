@@ -275,7 +275,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1481444605473</updated>
-      <workItem from="1481444606578" duration="6845000" />
+      <workItem from="1481444606578" duration="6857000" />
     </task>
     <task id="LOCAL-00001" summary="add alert window">
       <created>1481450941357</created>
@@ -295,7 +295,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6845000" />
+    <option name="totallyTimeSpent" value="6857000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="213" y="41" width="1400" height="910" extended-state="0" />
