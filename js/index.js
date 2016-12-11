@@ -148,7 +148,7 @@ var audio_temp = {
 })();
 function DeskWindow(msg, title) {
     var id = new Date().getTime() + parseInt(Math.random() * 1000);
-    var $dwindow = $('<div class="window" style="min-width:280px;"><div class="window-bar"><b style="margin-left:2px;">提示</b><div class="window-bar-close-group"><span class="window-bar-btn-close"></span></div></div><div class="window-content"></div><div class="window-btn-group center"><span class="window-btn active btn-ok">确定(O)</span></div></div>');
+    var $dwindow = $(' <div class="window" style="min-width:280px;"><div class="window-bar"><b style="margin-left:2px;">提示</b><div class="window-bar-close-group"><span class="window-bar-btn-close"></span></div></div><div class="window-content"></div><div class="window-btn-group center"><span class="window-btn active btn-ok">确定(O)</span></div></div>');
     $dwindow.attr('id', 'w_'+id);
     if(title != undefined){
         $dwindow.find('b').text(title);
