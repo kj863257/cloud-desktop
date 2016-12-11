@@ -23,7 +23,9 @@ document.ready(function () {
     var F5,F5interval,F5timeout;
     document.oncontextmenu = function (e) {
         e = e||window.event;
-        showMenu('#deskTopMenu', e);
+        if(e.target === document.body){
+            showMenu('#deskTopMenu', e);
+        }
         return false;
     };
     document.onclick = function () {
@@ -100,7 +102,8 @@ $(function () {
         e = e||window.event;
         e.stopPropagation();
         if(lastClick == this){
-            try{clearTimeout(dblClickTimeout)}catch(e){};
+            try{clearTimeout(dblClickTimeout)}catch(e){}
+            lastClick = undefined;
             alert('双击了' + this.innerText);
         } else {
             lastClick = this;
@@ -132,4 +135,35 @@ function refresh(time) {
 function beforeActive() {
     $('.icon').removeClass('checked');
     $('.contextmenu').hide();
+}
+window.alert = function (msg, title) {
+    new DeskWindow(msg, title);
+    audio_temp.msg.play();
+};
+var audio_temp = {
+};
+(function audioInit() {
+    audio_temp.msg = new Audio();
+    audio_temp.msg.src="/audio/msg.wav"
+})();
+function DeskWindow(msg, title) {
+    var id = new Date().getTime() + parseInt(Math.random() * 1000);
+    var $dwindow = $('<div class="window" style="min-width:280px;"><div class="window-bar"><b style="margin-left:2px;">提示</b><div class="window-bar-close-group"><span class="window-bar-btn-close"></span></div></div><div class="window-content"></div><div class="window-btn-group center"><span class="window-btn active btn-ok">确定(O)</span></div></div>');
+    $dwindow.attr('id', 'w_'+id);
+    if(title != undefined){
+        $dwindow.find('b').text(title);
+    }
+    $dwindow.find('.window-content').text(msg);
+    var close = function () {
+        $('#w_' + id).remove();
+    };
+    $dwindow.find('.window-bar-btn-close').click(close);
+    $dwindow.find('.btn-ok').click(close);
+    $dwindow.css({
+        'left':'50%',
+        'top':'50%',
+        'margin-left':-($dwindow.width()/2)+'px',
+        'margin-top':-($dwindow.height()/2)+'px'
+    });
+    $('body').append($dwindow);
 }

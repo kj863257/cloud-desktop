@@ -33,3 +33,61 @@ ul.contextmenu, ul.contextmenu ul{ z-index:80;display:none;position:absolute; ba
 .taskbar{padding:1px;height:28px;background:#D4D0C8;z-index:50;width:100%;position: absolute;bottom:0;border-top:1px solid #F9F9F8;box-shadow:0 -2px #D6D2CB;}
 .taskbar-btn{width:48px;line-height:24px;height:24px;border:2px solid #F6F6F4;border-left-color:#FCFCFB;border-right-color:#646464;border-bottom-color:#4C4C4C;}
 .taskbar-btn-logo{background:url('../image/xp.png') no-repeat center center;height:16px;width:16px;display:inline-block;position:relative;left:4px;top:4px;}
+.container{pointer-events: none;}
+.container *{pointer-events: auto;}
+.window{
+    background:#D4D0C8;position:absolute;border:2px solid #E5E5E5; border-right-color:#6F6F6F; border-bottom-color:#989898; border-left-color:#EEEEEE;
+    padding-bottom:12px;
+}
+.window-bar{
+    width:100%;height:18px;background:linear-gradient(45deg, #0A246A 0, #A6CAF0);color:white;line-height:18px;
+}
+.window-bar>b{
+    margin-left:2px;
+}
+.window-bar>.window-bar-close-group{
+    float:right;
+}
+.window-bar-btn-question::after{
+    text-shadow:1px 0px 0 black;padding-left:1px;text-align:center;width:14px;height:12px;line-height:12px;color:black;display:inline-block;background:#D4D0C8;border:2px solid #E5E5E5; border-right-color:#6F6F6F; border-bottom-color:#989898; border-left-color:#EEEEEE;
+    content:'？';
+}
+.window-bar-btn-close::after{
+    text-shadow:-1px 0px 0 black;text-align:center;width:14px;height:12px;line-height:12px;color:black;display:inline-block;background:#D4D0C8;border:2px solid #E5E5E5; border-right-color:#6F6F6F; border-bottom-color:#989898; border-left-color:#EEEEEE;
+    content: '×';
+}
+.window-content{
+    padding-top:20px;
+    padding-bottom:30px;
+    margin-left:64px;
+    margin-right:64px;
+}
+.window-btn-group{
+    width:100%;
+}
+.window-btn-group.center{
+    text-align:center;
+}
+.window-btn{
+    border:2px solid #FFFFFF; border-right-color:#808080; border-bottom-color:#404040; border-left-color: #efefef;
+    width:80px;
+    height:16px;
+    line-height:16px;
+    margin:0 auto;
+    display: block;
+    position: relative;
+}
+.window-btn.active{
+    outline:1px solid black;
+}
+.window-btn.active::before{
+    border:1px dotted black;
+    content:' ';
+    top:2px;
+    bottom:2px;
+    left: 2px;
+    right:2px;
+    display: block;
+    position: absolute;
+    border-radius:2px;
+}
