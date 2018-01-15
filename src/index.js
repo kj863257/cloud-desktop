@@ -18,6 +18,6 @@ require(['./util/ready'], function (ready) {
                 <Taskbar/>
             </Desktop>
             ,
-            document.querySelector('#canvas'));
+            document.getElementById('root'));
     });
 });
