@@ -61,10 +61,11 @@ document.ready(function () {
         }
         return false;
     };
-    document.body.onresize = function () {
+    let onresize = function () {
         $('#desktopIcons').css('height',document.body.offsetHeight-32+'px');
     };
-    window.onresize = document.body.onresize;
+    onresize();
+    document.body.onresize = onresize;
 });
 function showMenu(selector ,e) {
     beforeActive();

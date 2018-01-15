@@ -1,0 +1,4 @@
+.taskbar{padding:1px;height:28px;background:#D4D0C8;z-index:50;width:100%;position: absolute;bottom:0;border-top:1px solid #F9F9F8;box-shadow:0 -2px #D6D2CB;}
+.taskbar-btn{width:48px;line-height:24px;height:24px;border:2px solid #F6F6F4;border-left-color:#FCFCFB;border-right-color:#646464;border-bottom-color:#4C4C4C;}
+.taskbar-btn-logo{background-image:url('../image/xp.png');background-repeat:no-repeat;background-position:center;height:16px;width:16px;display:inline-block;position:relative;left:3px;top:4px;}
+.taskbar-btn>span{position:relative;left:5px;}

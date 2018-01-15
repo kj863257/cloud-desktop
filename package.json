@@ -1,0 +1,38 @@
+{
+  "name": "cloud-desktop",
+  "version": "1.0.0",
+  "description": "A rich client framework that looks like a microsoft windows operating system.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "copy-webpack-plugin": "^4.3.1",
+    "css-loader": "^0.28.8",
+    "file": "^0.2.2",
+    "file-loader": "^1.1.6",
+    "html-withimg-loader": "^0.1.16",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kj863257/cloud-desktop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kj863257/cloud-desktop/issues"
+  },
+  "homepage": "https://github.com/kj863257/cloud-desktop#readme",
+  "keywords": []
+}
