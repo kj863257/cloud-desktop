@@ -40,7 +40,17 @@ module.exports = {
                 use: ["url-loader?limit=8192"]
             },
             {
-                test: /\.html$/,
+                test: function(n){
+                    let reg = /(\.(\w*?))\.html$/gi;
+                    let r = reg.exec(n);
+                    if(r){
+                        let str = r[2];
+                        if(str.substring(str.lastIndexOf('.'),str.length) !== 'tmpl'){
+                            return true;
+                        }
+                    }
+                    return false;
+                },
                 use: ["html-loader"]
             }
         ],
@@ -49,7 +59,7 @@ module.exports = {
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             title: name,
-            template: 'src/index.htmpl'
+            template: 'src/index.tmpl.html'
         }),
         new webpack.HotModuleReplacementPlugin()
         // new webpack.optimize.UglifyJsPlugin({
